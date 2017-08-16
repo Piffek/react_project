@@ -1,22 +1,31 @@
-require('normalize.css/normalize.css');
-require('styles/App.css');
-
 import React from 'react';
-
-let yeomanImage = require('../images/yeoman.png');
+import Text from './Text';
 
 class AppComponent extends React.Component {
-  render() {
-    return (
-      <div className="index">
-        <img src={yeomanImage} alt="Yeoman Generator" />
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
-      </div>
-    );
-  }
+	constructor() {
+		super();
+		this.state = {
+			text: 'Non clicked'
+		};
+	}
+	
+	onButtonClick() {
+		this.setState({
+			text: 'Clicked'
+		});
+	}
+	
+	render() {
+		return (
+		  <div className="main">
+			<Text />
+			<p>{ this.state.text }</p>
+			<button onClick={this.onButtonClick.bind(this)}>Kliknij!</button>
+			<p>HelloWorld</p>
+			<p>HelloWorld</p>
+		  </div>
+		);
+	}
 }
-
-AppComponent.defaultProps = {
-};
 
 export default AppComponent;
