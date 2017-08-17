@@ -18,7 +18,9 @@ class AppComponent extends React.Component {
 	render() {
 		return (
 		  <div className="main">
-			<Text />
+			<Text exampleValue = "cos"
+			  clickText = {this.state.text}
+			/>
 			<p>{ this.state.text }</p>
 			<button onClick={this.onButtonClick.bind(this)}>Kliknij!</button>
 			<p>HelloWorld</p>
