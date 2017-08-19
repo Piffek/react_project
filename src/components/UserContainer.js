@@ -4,11 +4,11 @@ import ShowUserButton from './Presentation/ShowUserButton';
 import User from './Presentation/User';
 
 class UserContainer extends React.Component {
-	constructor(props){
+	constructor(props) {
   		super(props);
 		this.state = {
-			userData: [],
-		}
+			userData: []
+		};
 	}
 	
 	showUser() {
@@ -20,18 +20,17 @@ class UserContainer extends React.Component {
 			},
 		})
 		.then((response) => response.json())
-		.then(function(data){
-			let id = data;
-			return id.map(function(userId){
-				this.setState({userData: userId});
-			})
-	    })
+		.then((res) => {
+		    this.setState({userData: res})
+		})
     }
+	
+	
 	
 	render() {
 		return(
 		    <div>
-			  <User id={this.props.match.params.id}/>
+			  <User id={this.props.match.params.id} data={this.state.userData}/>
 			  <ShowUserButton showUser={this.showUser.bind(this)} />
 	        </div>
 		)
