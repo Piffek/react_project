@@ -1,8 +1,9 @@
 import React from 'react';
+import ListItem from './ListItem';
 
 const User = (props) => {
 	let dat = props.data.map((users) => {
-		return (<li key={users.id}>{users.id}</li>);
+		return <ListItem key={Math.random().toString()} value={users.id} />
 	});
 
 	return (
