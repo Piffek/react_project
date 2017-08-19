@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import About from './Presentation/About';
 import Contact from './Presentation/Contact';
-import User from './Presentation/User';
+import UserContainer from './UserContainer';
 
 class App extends Component {
 	render() {
@@ -22,7 +22,7 @@ class App extends Component {
 					</li>
 				  </ul>
 				  <Route exact path="/" component={About} />
-				  <Route path="/user/:id" component={User}/>
+				  <Route path="/user/:id" component={UserContainer}/>
 				  <Route path="/contact" component={Contact} />
 				</div>
 			</Router>
