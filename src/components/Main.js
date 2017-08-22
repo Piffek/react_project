@@ -20,9 +20,12 @@ class App extends Component {
 					<li>
 					  <Link to="/contact">Kontakt</Link>
 					</li>
+                    <li>
+                      <Link to="/users">Pokaż userów</Link>
+                    </li>
 				  </ul>
 				  <Route exact path="/" component={About} />
-				  <Route path="/user/:id" component={UserContainer}/>
+				  <Route path="/users/" component={UserContainer}/>
 				  <Route path="/contact" component={Contact} />
 				</div>
 			</Router>

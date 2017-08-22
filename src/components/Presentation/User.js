@@ -3,12 +3,11 @@ import ListItem from './ListItem';
 
 const User = (props) => {
 	let dat = props.data.map((users) => {
-		return <ListItem key={Math.random().toString()} value={users.id} />
+		return <ListItem key={Math.random().toString()} value={users.name} />
 	});
 
 	return (
 	  <div className="container">
-	    <span>User id: {props.id}</span>
 		<ul> {dat}</ul>
 
 	  </div>

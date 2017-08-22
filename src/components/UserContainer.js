@@ -2,6 +2,9 @@ import React from 'react';
 import fetch from 'isomorphic-fetch';
 import ShowUserButton from './Presentation/ShowUserButton';
 import User from './Presentation/User';
+import CSSModules from 'react-css-modules';
+import styles from '../styles/App.css';
+console.log('STYLES', styles);
 
 class UserContainer extends React.Component {
 	constructor(props) {
@@ -10,7 +13,6 @@ class UserContainer extends React.Component {
 			userData: []
 		};
 	}
-	
 	showUser() {
 		fetch('http://localhost:8000/getUserData.php', {
 			method: 'GET',
@@ -31,11 +33,11 @@ class UserContainer extends React.Component {
 		return(
 		    <div>
 			  <User id={this.props.match.params.id} data={this.state.userData}/>
-			  <ShowUserButton showUser={this.showUser.bind(this)} />
+			  <ShowUserButton styleName={styles.button} showUser={this.showUser.bind(this)} />
 	        </div>
 		)
 	}
 	
 }
 
-export default UserContainer;
+export default CSSModules(UserContainer, styles);
