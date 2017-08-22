@@ -12,7 +12,7 @@ class UserContainer extends React.Component {
 		};
 	}
 	showUser() {
-		fetch('http://localhost:8000/getUserData.php', {
+		fetch('http://localhost:80/getUserData.php', {
 			method: 'GET',
 			headers: {
 				'Accept' : 'application/json',

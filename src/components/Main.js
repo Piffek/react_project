@@ -4,7 +4,7 @@ import {
 	Route,
 	Link
 } from 'react-router-dom';
-import About from './Presentation/About';
+import Home from './Presentation/Home';
 import Contact from './Presentation/Contact';
 import UserContainer from './UserContainer';
 import styles from '../styles/nav.scss';
@@ -13,13 +13,13 @@ class App extends Component {
 	render() {
 		return(
 			<Router>
-				<div className='container'>
+				<div>
 				 <nav styleName={styles.nav}>
 					  <Link to="/"><button>About</button></Link>
 					  <Link to="/contact"><button>Kontakt</button></Link>
                       <Link to="/users"><button>Pokaż userów</button></Link>
 			      </nav>
-				  <Route exact path="/" component={About} />
+				  <Route exact path="/" component={Home} />
 				  <Route path="/users/" component={UserContainer}/>
 				  <Route path="/contact" component={Contact} />
 				</div>

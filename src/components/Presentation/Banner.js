@@ -3,7 +3,9 @@ import styles from '../../styles/banner.scss';
 
 const Banner = () => {
 	return (
-	  <div styleName={styles.banner} className="banner"></div>
+	  <div className="banner">
+         <img></img>
+      </div>
 	);
 }
 
