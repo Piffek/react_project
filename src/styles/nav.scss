@@ -1,0 +1,27 @@
+*{
+	margin:0px;
+}
+
+nav{
+	background-color: aquamarine;
+	width: 100%;
+	height:100px;
+	display: -webkit-flex;
+    display: flex;
+
+	
+	&>a{
+		flex: (100/3);
+	}
+	
+	&>a button{
+		width:100%;
+		height:100%;
+		background-color: transparent;
+		border:none;
+		
+		&:hover{
+			background-color: aliceblue;
+		}
+	}
+}

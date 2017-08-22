@@ -2,8 +2,7 @@ import React from 'react';
 import fetch from 'isomorphic-fetch';
 import ShowUserButton from './Presentation/ShowUserButton';
 import User from './Presentation/User';
-import CSSModules from 'react-css-modules';
-import styles from '../styles/style.scss';
+
 
 class UserContainer extends React.Component {
 	constructor(props) {
@@ -32,11 +31,11 @@ class UserContainer extends React.Component {
 		return(
 		    <div>
 			  <User id={this.props.match.params.id} data={this.state.userData}/>
-			  <ShowUserButton styleName={styles.button} showUser={this.showUser.bind(this)} />
+			  <ShowUserButton showUser={this.showUser.bind(this)} />
 	        </div>
 		)
 	}
 	
 }
 
-export default CSSModules(UserContainer, styles);
+export default UserContainer;
