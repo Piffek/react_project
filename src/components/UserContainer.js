@@ -3,8 +3,7 @@ import fetch from 'isomorphic-fetch';
 import ShowUserButton from './Presentation/ShowUserButton';
 import User from './Presentation/User';
 import CSSModules from 'react-css-modules';
-import styles from '../styles/App.css';
-console.log('STYLES', styles);
+import styles from '../styles/style.scss';
 
 class UserContainer extends React.Component {
 	constructor(props) {
