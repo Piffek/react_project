@@ -7,18 +7,14 @@ import {
 import Home from './Presentation/Home';
 import Contact from './Presentation/Contact';
 import UserContainer from './UserContainer';
-import styles from '../styles/nav.scss';
+import Nav from './Presentation/Nav';
 
 class App extends Component {
 	render() {
 		return(
 			<Router>
 				<div>
-				 <nav styleName={styles.nav}>
-					  <Link to="/"><button>About</button></Link>
-					  <Link to="/contact"><button>Kontakt</button></Link>
-                      <Link to="/users"><button>Pokaż userów</button></Link>
-			      </nav>
+				  <Nav/>
 				  <Route exact path="/" component={Home} />
 				  <Route path="/users/" component={UserContainer}/>
 				  <Route path="/contact" component={Contact} />
