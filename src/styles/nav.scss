@@ -3,7 +3,7 @@
     font-weight: bold;
     text-transform: uppercase;
 	font-family: 'Roboto Condensed', sans-serif;
-	    overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 nav{
@@ -13,10 +13,8 @@ nav{
 	display: -webkit-flex;
     display: flex;
 
-	
 	&>a{
 		flex: (100/3);
-
 		height:10vh;
 	}
 	
