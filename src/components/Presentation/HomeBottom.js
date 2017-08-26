@@ -3,7 +3,9 @@ import styles from '../../styles/homeBottom.scss';
 
 const HomeBottom = () => {
 	return (
-        <article></article>
+		<article>
+		  <a name="bottom"></a>
+		</article>
 	);
 }
 

@@ -7,7 +7,7 @@ const Banner = () => {
 	  <div className="banner">
 		 <h1>Subject HERE</h1>
 		 <button>Zapisz się</button>
-         <button id='buttonShift'><div id="shift"><AngleDown /></div></button>
+         <a href="#bottom"><button id='buttonShift'><div id="shift"><AngleDown /></div></button></a>
          <img></img>
       </div>
 	);
