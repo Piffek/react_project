@@ -1,17 +1,15 @@
 import React from 'react';
 
-const ContactForm = () => {
+const ContactForm = (props) => {
 	return (
-	  <div>
-			<form>
+			<form onSubmit={props.sendSubmit}>
 			  <label>
-				Name:
-				<input type="text" name="name" />
+				Email:
+				<input type="text" value={props.sendEmail}  onChange={props.sendChange}/>
 			  </label>
 			  <input type="submit" value="Submit" />
 			</form>
-		</div>
-	);
+	)
 }
 
 export default ContactForm;
