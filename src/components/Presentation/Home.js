@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from './Banner';
-import HomeBottom from './HomeBottom';
+import Banner from './Home/Banner';
+import HomeBottom from './Home/HomeBottom';
 
 const Home = () => {
 

@@ -29,11 +29,11 @@ function getDefaultModules() {
         loader: 'style-loader!css-loader'
       },
       {
-        test: /\.sass/,
+        test: /\.sass$/,
         loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
       },
       {
-        test: /\.scss/,
+        test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
       },
       {

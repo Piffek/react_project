@@ -1,6 +1,6 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
-import ShowUserButton from './Presentation/ShowUserButton';
+import ShowUserButton from './Presentation/User/ShowUserButton';
 import User from './Presentation/User';
 
 
