@@ -5,7 +5,9 @@ const ContactForm = (props) => {
 		<form onSubmit={props.sendSubmit}>
 		  <label>
 			Email:
-			<input type="text" value={props.sendEmail}  onChange={props.sendChange}/>
+			<input type="text" value={props.sendEmail}  onChange={props.sendChangeEmail}/>
+			Wiadomość
+			<input type="text" value={props.sendBody} onChange={props.sendChangeBody} />
 		  </label>
 		  <input type="submit" value="Submit" />
 		</form>

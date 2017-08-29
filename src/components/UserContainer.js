@@ -12,7 +12,6 @@ class UserContainer extends React.Component {
 		};
 	}
 	showUser(e) {
-		e.preventDefault();
 		fetch('http://localhost:8000/react/getUserData.php', {
 			method: 'GET',
 			headers: {
