@@ -14,6 +14,7 @@ class App extends Component {
 		return(
 			<Router>
 				<div>
+			
 				  <Nav/>
 				  <Route exact path="/" component={Home} />
 				  <Route path="/users/" component={UserContainer}/>

@@ -1,5 +1,6 @@
 import React from 'react';
 import AngleDown from 'react-icons/lib/fa/angle-down'
+import './banner.scss';
 
 const Banner = () => {
 	return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import './homeBottom.scss';
 
 const HomeBottom = () => {
 	return (
