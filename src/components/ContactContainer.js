@@ -1,12 +1,16 @@
 import React from 'react';
-import axios from 'axios';
 import ContactForm from './Presentation/Contact/ContactForm';
+import {DB_FIREBASE} from '../config/firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 
 
 class ContactContainer extends React.Component {
 	constructor(props) {
       super(props);
+		this.app = firebase.initializeApp(DB_FIREBASE);
+		this.db = this.app.database().ref().child('value');
 		this.state = { 
 			value: '',
 			body: ''
@@ -15,6 +19,7 @@ class ContactContainer extends React.Component {
 		this.handleChangeEmail = this.handleChangeEmail.bind(this);
 		this.handleChangeBody = this.handleChangeBody.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		
 		
 	}
 	
@@ -31,27 +36,16 @@ class ContactContainer extends React.Component {
 	}
 	
 	handleSubmit(e){
-		fetch('http://localhost:8000/react/contactWithMe.php', {
-		  method: 'POST', 
-		  headers: {
-				'Accept' : 'application/json',
-				'Content-Type' : 'application/json'
-		  },
-		  body: JSON.stringify({
-			  email: this.state.value,
-			  body: this.state.body
-		  })
-	    }).then(function(response) {
-			if(response.status >= 400){
-				console.log('Nie można wysłać wiadomości');
-			}else{
-				alert('Dziękujemy za zgłoszenie');
-			}
-		})
 		e.preventDefault();
+		this.db.push().set({ 
+			email: this.state.value,
+			content: this.state.body
+		
+		});
 
 
 	}
+	
 	
 	render() {
 		return(

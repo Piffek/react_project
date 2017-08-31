@@ -31,4 +31,4 @@ bower_components/
 
 # IDE/Editor data
 .idea
-firebase.js
+config/firebase.js
