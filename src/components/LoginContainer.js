@@ -5,7 +5,6 @@ import {DB_FIREBASE} from '../config/firebase';
 class LoginContainer extends React.Component {
 	constructor(props){
 		super(props);
-		this.app = Firebase.initializeApp(DB_FIREBASE);
         this.state = {
             userEmail: '',
 			token: ''
@@ -14,14 +13,6 @@ class LoginContainer extends React.Component {
 	
 	authenticate(){
 		Firebase.auth().signInWithPopup(new Firebase.auth.FacebookAuthProvider());
-        
-        const user = Firebase.auth().currentUser;
-        console.log(user);
-			if(user != null){
-				user.getToken(true).then(function(idToken){
-					localStorage.setItem('token', idToken);
-				});
-        	}
 	}
     
 	render() {
