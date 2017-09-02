@@ -11,6 +11,7 @@ class ContactContainer extends React.Component {
       super(props);
 		this.app = firebase.initializeApp(DB_FIREBASE);
 		this.db = this.app.database().ref().child('value');
+		
 		this.state = { 
 			value: '',
 			body: ''
@@ -40,10 +41,7 @@ class ContactContainer extends React.Component {
 		this.db.push().set({ 
 			email: this.state.value,
 			content: this.state.body
-		
 		});
-
-
 	}
 	
 	
