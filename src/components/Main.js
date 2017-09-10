@@ -14,10 +14,10 @@ import {DB_FIREBASE} from '../config/firebase';
 class App extends Component {
     constructor(props){
         super(props);
-        this.app = Firebase.initializeApp(DB_FIREBASE);
     }
 
     componentWillMount(){
+      this.app = Firebase.initializeApp(DB_FIREBASE);
       Firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             user.getToken(true).then(function(idToken){

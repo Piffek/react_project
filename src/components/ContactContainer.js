@@ -9,8 +9,7 @@ import 'firebase/database';
 class ContactContainer extends React.Component {
 	constructor(props) {
       super(props);
-		this.app = firebase.initializeApp(DB_FIREBASE);
-		this.db = this.app.database().ref().child('value');
+
 		
 		this.state = { 
 			value: '',
@@ -38,7 +37,9 @@ class ContactContainer extends React.Component {
 	
 	handleSubmit(e){
 		e.preventDefault();
-		this.db.push().set({ 
+        const db = this.app.database().ref().child('value');
+        
+		db.push().set({ 
 			email: this.state.value,
 			content: this.state.body
 		});

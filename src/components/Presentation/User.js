@@ -8,7 +8,7 @@ const User = (props) => {
 
 	return (
 	  <div className="container">
-		<ul> {dat}</ul>
+		<ul>{dat}</ul>
 
 	  </div>
 	);

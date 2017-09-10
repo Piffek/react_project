@@ -1,6 +1,5 @@
 import React from 'react';
 import Firebase from 'firebase';
-import {DB_FIREBASE} from '../config/firebase';
 
 class LoginContainer extends React.Component {
 	constructor(props){
@@ -11,15 +10,18 @@ class LoginContainer extends React.Component {
         }
 	}
 	
-	authenticate(){
+	authenticateWithFB(){
 		Firebase.auth().signInWithPopup(new Firebase.auth.FacebookAuthProvider());
 	}
     
+    authenticateWithGoogle(){
+		Firebase.auth().signInWithPopup(new Firebase.auth.GoogleAuthProvider());
+	}
 	render() {
 		return(
             <div>
-              <button onClick={this.authenticate.bind(this)}>Zaloguj przez facebooka</button>
-             
+              <button onClick={this.authenticateWithFB.bind(this)}>Zaloguj przez facebooka</button>
+              <button onClick={this.authenticateWithGoogle.bind(this)}>Zaloguj przez Google</button>
             </div>
 		)
 	}
